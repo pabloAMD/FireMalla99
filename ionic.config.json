@@ -1,0 +1,7 @@
+{
+  "name": "MallaPabloFirebase",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
