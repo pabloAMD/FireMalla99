@@ -1,9 +1,43 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>registro</ion-title>
-  </ion-toolbar>
+    <ion-toolbar>
+        <ion-toolbar color="tema">
+            <ion-buttons slot="start">
+                <ion-back-button defaultHref="/"></ion-back-button>
+            </ion-buttons>
+            <ion-title style="padding-left: 0" class=" ion-text-center ">Registro</ion-title>
+        </ion-toolbar>
+    </ion-toolbar>
+
+
 </ion-header>
 
 <ion-content>
+    <br>
+    <h3 class="titulo">Registrar Destino Turistico</h3>
+    <br>
+    <ion-item>
+        <ion-label position="floating ">Nombre</ion-label>
+        <ion-input [(ngModel)]="turismo.nombre" name="nombre"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="floating ">Ciudad</ion-label>
+        <ion-input [(ngModel)]="turismo.ciudad" name="apellido"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="floating ">Pais</ion-label>
+        <ion-input [(ngModel)]="turismo.pais" name="correo"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="floating ">Categoria</ion-label>
+        <ion-input [(ngModel)]="turismo.categoria" name="correo"></ion-input>
+    </ion-item>
+    <ion-item>
+        <ion-label position="floating ">Imagen</ion-label>
+        <ion-input (change)="cargaImagen($event)" type="file"></ion-input>
+        <h1>{{imageProdu}}</h1>
+    </ion-item>
 
+    <br>
+    <br>
+    <ion-button color="danger" (click)=" cargarImgBase()" expand="block ">Registrarse</ion-button>
 </ion-content>
